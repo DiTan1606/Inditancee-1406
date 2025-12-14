@@ -2,7 +2,7 @@
 
 function App() {
   return (
-    <div>hêllo</div>
+    <div>deploy ròi nè</div>
   );
 }
 
