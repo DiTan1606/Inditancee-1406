@@ -1,0 +1,20 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Cho phép đọc/ghi tất cả documents (chỉ dùng cho development)
+    match /{document=**} {
+      allow read, write: if true;
+    }
+    
+    // Rules cụ thể cho collection posts
+    match /posts/{postId} {
+      allow read, write: if true;
+    }
+    
+    // Rules cho collection test
+    match /test/{testId} {
+      allow read, write: if true;
+    }
+  }
+}
